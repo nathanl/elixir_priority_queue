@@ -86,7 +86,7 @@ end
   # end
   def meld(l = {key_l, value_l, sub_l}, r = {key_r, value_r, sub_r}) do
     cond do
-      key_l < key_r -> {key_l, value_l, [r | sub_l]}
+      key_l > key_r -> {key_l, value_l, [r | sub_l]}
       true          -> {key_r, value_r, [l | sub_r]}
     end
   end
